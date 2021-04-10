@@ -19,7 +19,7 @@ import functions as func
 if __name__ == '__main__':
 
     # Set the desired dataset
-    DS = 2
+    DS = 1
     if DS == 1 or DS == 2: #Selects the number of subejcts according to the selected dataset
         NoSubjects = 27
     else:
