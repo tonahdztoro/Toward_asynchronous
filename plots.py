@@ -21,13 +21,13 @@ import numpy as np
 import seaborn as sns
 
 
+# Dataset results to be plotted
+ds = 1
 
-# Select the dataset results to be plotted
-DS = 1
 
 # Set the global directory
 script_dir = os.path.dirname(__file__)
-results_path = 'Results/DS' + str(DS) + '/'
+results_path = 'Results/DS' + str(ds) + '/'
 file_path = os.path.join(script_dir, results_path)
 
 # Set the feature sets to plot:
@@ -49,7 +49,7 @@ for clf in CLF:
 
     for fs in FS:
         
-        container = np.load(file_path + fs + '_' + clf  + '_DS' + str(DS) + '.npz', mmap_mode='r');
+        container = np.load(file_path + fs + '_' + clf  + '_DS' + str(ds) + '.npz', mmap_mode='r');
         data = [container[key] for key in container]
         F1score = data[0]
         F1scoreMean = np.mean(F1score, axis=(1,2))
@@ -68,23 +68,25 @@ for clf in CLF:
 df_new = df.reset_index()
 df_new = pd.melt(df,id_vars=['clf'],var_name='FS', value_name='Precision')
 
+
 # Do the box plot
+
 plt = sns.boxplot(x="clf", y='Precision', hue="FS", data=df_new, showmeans=True, palette="Set1", \
                   meanprops={"marker":"s","markerfacecolor":"white", "markeredgecolor":"black"})
 plt.set(ylim=(0.4, 1.01))
-plt.set_ylabel('Precision')
+plt.set_ylabel('F1 score')
 plt.set_xlabel('Classifiers')
-plt.set_title('Precision for all feature sets with all classifiers')
+plt.set_title('F1 score for all feature sets with all classifiers')
 plt.yaxis.grid(True)
 plt.legend(loc='upper center', bbox_to_anchor=(0.5, 0.15), fancybox=True, shadow=True, ncol=3)
 
 fig = plt.get_figure()
-
+del plt
 
 # Save the figure
 figures_path = 'Figures/'
 complete_path = os.path.join(script_dir, figures_path)
-fig.savefig(complete_path + 'DS' + str(DS) + '_' + str(FeatureSets) + '.pdf', dpi=400, bbox_inches="tight")
+fig.savefig(complete_path + 'DS' + str(ds) + '_' + str(FeatureSets) + '.pdf', dpi=400, bbox_inches="tight")
 
 
 

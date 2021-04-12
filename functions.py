@@ -11,7 +11,7 @@ arXiv:
 doi: 10.1016/j.bspc.2020.102351
 
 
-This file collects the function used in the script main
+This file collects the functions used in the script main
 """
 
 import numpy as np
