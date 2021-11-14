@@ -1,1 +1,16 @@
-Currently the actual datasets are replaced by an archive "corpusFoldsSn". To get the actual datasets please contact the developer to "tonahdztoro@gmail.com"
+-----------------------------------------------------------------------------------------------------
+Description for the datasets used in the work
+"Toward asynchronous EEG-based BCI: Detecting imagined words segments in continuous EEG signals"
+published on "Biomedical Signal Processing and Control"
+-----------------------------------------------------------------------------------------------------
+- Each dataset Sn represents the instances for subject n, the number of subjects depends on the dataset used (1, 2, or 3)
+- The datasets are saved in dictionary form for python reading
+- Each file Sn contains the 4 folds used
+- Each fold contains three keys ("TestEpochs", "TestTrials", and  "TrainTrials")
+- TestEpoch is used for finding the onset and ending of the iamgined word for the evaluation of the F1 score
+- TestTrials is a list of the 25% of the trials selected for testing the classifiers
+- TrainTrials is a list of the 75% of the trials selected for training the classifiers in that fold
+- Each trial contains the instances with the segments already split and the features already extracted
+------------------------------------------------------------------------------------------------------
+If you wish to get a copy of the raw EEG datasets, please contact at "tonahdztoro@gmail", or "kargaxxi@inaoep.mx"
+in order to get and fill the proper documentation.
