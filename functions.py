@@ -7,7 +7,7 @@ Code for the paper
 "Toward asynchronous EEG-based BCI: Detecting imagined words segments in continuous EEG signals"
 published on the journal "Biomedical Signal Processing and Control"
 
-arXiv: 
+arXiv:2105.04294
 doi: 10.1016/j.bspc.2020.102351
 
 
