@@ -3,6 +3,10 @@ Description for the datasets used in the work
 "Toward asynchronous EEG-based BCI: Detecting imagined words segments in continuous EEG signals"
 published on "Biomedical Signal Processing and Control"
 -----------------------------------------------------------------------------------------------------
+This folder contains the dataset used in the paper, this is, the instances with the features already extracted, and ready to be used in the classifiers.
+The full dataset are stored in kaggle at
+https://www.kaggle.com/datasets/tonahdztoro/toward-asynchronous
+-----------------------------------------------------------------------------------------------------
 - Each dataset Sn represents the instances for subject n, the number of subjects depends on the dataset used (1, 2, or 3)
 - The datasets are saved in dictionary form for python reading
 - Each file Sn contains the 4 folds used
