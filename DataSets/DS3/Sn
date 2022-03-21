@@ -1,1 +1,6 @@
-The actual dadasets are repalced by this txt, please contact the developer at "tonahdztoro@gmail" to obtain the actual datasets
+-----------------------------------------------------------------------------------------------------
+This folder contains the dataset used in the paper, this is, the instances with the features already extracted, and ready to be used in the classifiers.
+The actual datasets are replaced by this txt due to its size.
+The full dataset are stored in kaggle at
+https://www.kaggle.com/datasets/tonahdztoro/toward-asynchronous
+-----------------------------------------------------------------------------------------------------
